@@ -14,7 +14,9 @@ wordCycle()
 setInterval(wordCycle, 2000);
 
 // Setup 
-const randBtn = document.querySelector('changingWord');
+const btn = document.querySelector('#changingWord');
+const form = document.querySelector('#searchBar');
 
 // Bind event listeners
-randBtn.addEventListener('click', goToSite);
+btn.addEventListener('click', getPage);
+form.addEventListener('submit', submitSearch);
