@@ -101,10 +101,13 @@ const resultsData = [
 { query:'Kimchi', id: 10, path: 'www.foodiewithfamily.com', title: 'Kimchi Recipe, Easy, Fast, Mak Kimchi - Foodie with Family', date: 'Jun 25, 2018', description: 'This fragrant, simple, authentic, healthy Easy, Fast Kimchi Mak Kimchi recipe can be made in any kitchen. This tutorial takes the mystery out of ...' },
 ];
 
-function filterSearch(query){
-const resultsFiltered = resultsData.filter((Rslt) => Rslt.query.toLowerCase() === query.toLowerCase())
-console.log(resultsFiltered)
-}
 
-filterSearch('rice')
+console.log((resultsData[Math.floor(Math.random()*resultsData.length)]).path);
+
+// function filterSearch(query){
+// const resultsFiltered = resultsData.filter((Rslt) => Rslt.query.toLowerCase() === query.toLowerCase())
+// console.log(resultsFiltered)
+// }
+
+// filterSearch('rice')
 
