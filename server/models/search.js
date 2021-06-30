@@ -2,6 +2,7 @@ const resultsData = require('../data');
 
 class Result {
     constructor(data) {
+        this.query = data.query;
         this.id = data.id;
         this.path = data.path;
         this.title = data.title;
@@ -14,15 +15,16 @@ class Result {
         return results;
     }
 
-    // static get findById(title) {
-    //     try {
-    //         const results = resultsData.filter((Rslt) => Rslt.title === title)[0];
-    //         const resultdisp = new Result(resultsData);
-    //         return resultdisp;
-    //     } catch (err) {
-    //         throw new Error('That querey does not exist!');
-    //     }      
-    // }
+
+    
+    static find(query) {
+        try {
+            const resultsFiltered = resultsData.filter((Rslt) => Rslt.query === query);
+            return resultsFiltered;
+        } catch (err) {
+            throw new Error('That querey does not exist!');
+        }      
+    }
 }
 
 module.exports = Result;
