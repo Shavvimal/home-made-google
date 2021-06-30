@@ -8,14 +8,13 @@ class Result {
         this.title = data.title;
         this.date = data.date;
         this.description = data.description;
+        this.link = data.link;
     }
     
     static get all() {
         const results = resultsData.map((oneRes) => new Result(oneRes));
         return results;
     }
-
-
     
     static find(query) {
         try {
